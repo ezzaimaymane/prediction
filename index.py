@@ -2,7 +2,7 @@ import joblib
 from flask import Flask, request, jsonify
 
 # Load the saved model
-loaded_model = joblib.load('gb_model.pkl')
+loaded_model = joblib.load('gb_model_without_random_state.pkl')
 
 # Create a Flask web application
 app = Flask("performancePrediction_gbApi")
