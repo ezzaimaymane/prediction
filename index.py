@@ -1,8 +1,9 @@
-import joblib
+import pickle
 from flask import Flask, request, jsonify
 
 # Load the saved model
-loaded_model = joblib.load('gb_model_without_random_state.pkl')
+with open('gb_model_without_random_state.pkl', 'rb') as model_file:
+    loaded_model1 = pickle.load(model_file)
 
 # Create a Flask web application
 app = Flask("performancePrediction_gbApi")
